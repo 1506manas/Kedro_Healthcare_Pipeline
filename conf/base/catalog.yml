@@ -1,0 +1,24 @@
+patients:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: data/01_raw/patients.csv
+
+symptoms:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: data/01_raw/symptoms.csv
+
+medications:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: data/01_raw/medications.csv
+
+conditions:
+  type: kedro_datasets.pandas.ExcelDataset
+  filepath: data/01_raw/conditions.xlsx
+
+encounters:
+  type: kedro_datasets.pandas.ParquetDataset
+  filepath: data/01_raw/encounters.parquet
+
+patient_gender:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: data/01_raw/patient_gender.csv
+

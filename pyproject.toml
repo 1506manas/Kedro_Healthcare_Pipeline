@@ -1,0 +1,34 @@
+[build-system]
+requires = [ "setuptools",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "century_new_pipeline"
+readme = "README.md"
+dynamic = [ "dependencies", "version",]
+
+[project.scripts]
+century-new-pipeline = "century_new_pipeline.__main__:main"
+
+[tool.kedro]
+package_name = "century_new_pipeline"
+project_name = "century_new_pipeline"
+kedro_init_version = "0.19.9"
+tools = [ "None",]
+example_pipeline = "False"
+source_dir = "src"
+
+[project.entry-points."kedro.hooks"]
+
+[tool.setuptools.dynamic.dependencies]
+file = "requirements.txt"
+
+[tool.setuptools.dynamic.version]
+attr = "century_new_pipeline.__version__"
+
+[tool.setuptools.packages.find]
+where = [ "src",]
+namespaces = false
+
+[tool.kedro_telemetry]
+project_id = "060659a0602d4d288f541ca0aa4a3571"

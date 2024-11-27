@@ -1,0 +1,43 @@
+tuva_mapping:
+  patients:
+    PATIENT_ID: "patient_id"
+    BIRTHDATE: "birth_date"
+    GENDER: "sex"
+    RACE: "race"
+    ETHNICITY: "ethnicity"
+    HEALTHCARE_EXPENSES: "healthcare_expenses"
+    HEALTHCARE_COVERAGE: "healthcare_coverage"
+
+  symptoms:
+    PATIENT: "patient_id"
+    SYMPTOMS: "observation_type"
+    AGE_BEGIN: "observation_date"
+    AGE_END: "age_end"
+
+  medications:
+    PATIENT: "patient_id"
+    DESCRIPTION: "observation_name"
+    BASE_COST: "observation_value"
+    START: "observation_start_date"
+    STOP: "observation_end_date"
+
+  conditions:
+    PATIENT: "patient_id"
+    DESCRIPTION: "condition_name"
+    CODE: "condition_code"
+    START: "condition_start_date"
+    STOP: "condition_end_date"
+
+  encounters:
+    Id: "encounter_id"
+    START: "encounter_start_date"
+    STOP: "encounter_end_date"
+    PATIENT: "patient_id"
+    ENCOUNTERCLASS: "encounter_class"
+    CODE: "encounter_code"
+    DESCRIPTION: "encounter_description"
+
+mysql:
+  db_url: "mysql+pymysql://root:manasmbs%40456@127.0.0.1:3306/kedro"
+  table_name: "kedro_table"
+  if_exists: "replace"
